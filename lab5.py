@@ -15,30 +15,12 @@ def bubbleSort(arr):
 #находим ключ
 def findKey(arr, key):
     n = len(arr)
-    
     for i in range(n):
         if arr[i] == key:
             print(f'index {i} number {arr[i]}')
-    
-    return -1
-    
-        
-def lab5(sizeOfList,startZone,finishZone):
-    list = []
-    #fill our list
-    for x in range(sizeOfList):
-        randomNumber = random.randint(startZone, finishZone)
-        list.append(randomNumber)
-    print(list)
-    #sorting
-    bubbleSort(list)
-    print(list)
-    #find key
-    print(findKey(list,5))
-    
+    return print('finish')
 
-lab5(10,-111,110)
-#другой метод
+
 def vstavkiSort(arr):
     for i in range(1, len(arr)):
         key = arr[i]  # берем 2ой элемент
@@ -50,3 +32,23 @@ def vstavkiSort(arr):
             
         arr[j + 1] = key #взависимости от исхода присваеваем элементу кей
     return arr   
+        
+def lab5(sizeOfList,startZone,finishZone):
+    list = []
+    #fill our list
+    for x in range(sizeOfList):
+        randomNumber = random.randint(startZone, finishZone)
+        list.append(randomNumber)
+    print(list)
+    #sorting
+    vstavkiSort(list)
+    print(list)
+    #find key
+    findKey(list,5)
+    
+
+lab5(10,0,10)
+
+
+#другой метод
+
